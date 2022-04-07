@@ -40,13 +40,13 @@
                             @lang('crud.common.back')
                         </a>
 
-                        <a
+                        {{-- <a
                             href="{{ route('homepage-settings.create') }}"
                             class="button"
                         >
                             <i class="mr-1 icon ion-md-add text-primary"></i>
                             @lang('crud.common.create')
-                        </a>
+                        </a> --}}
 
                         <button
                             type="submit"

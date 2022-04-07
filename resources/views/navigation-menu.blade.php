@@ -24,7 +24,8 @@
                         </x-dropdown-link>
                         @endcan
                         @can('view-any', App\Models\HomepageSetting::class)
-                        <x-dropdown-link href="{{ route('homepage-settings.index') }}">
+                        <x-dropdown-link href="{{ url('homepage-settings/1/edit') }}">
+                        {{-- <x-dropdown-link href="{{ route('homepage-settings.index') }}"> --}}
                         Homepage Settings
                         </x-dropdown-link>
                         @endcan
