@@ -18,7 +18,7 @@ class BrochureRequestController extends Controller
      */
     public function index(Request $request)
     {
-        $this->authorize('view-any', BrochureRequest::class);
+        // $this->authorize('view-any', BrochureRequest::class);
 
         $search = $request->get('search', '');
 
@@ -35,7 +35,7 @@ class BrochureRequestController extends Controller
      */
     public function store(BrochureRequestStoreRequest $request)
     {
-        $this->authorize('create', BrochureRequest::class);
+        // $this->authorize('create', BrochureRequest::class);
 
         $validated = $request->validated();
 
@@ -51,7 +51,7 @@ class BrochureRequestController extends Controller
      */
     public function show(Request $request, BrochureRequest $brochureRequest)
     {
-        $this->authorize('view', $brochureRequest);
+        // $this->authorize('view', $brochureRequest);
 
         return new BrochureRequestResource($brochureRequest);
     }
@@ -65,7 +65,7 @@ class BrochureRequestController extends Controller
         BrochureRequestUpdateRequest $request,
         BrochureRequest $brochureRequest
     ) {
-        $this->authorize('update', $brochureRequest);
+        // $this->authorize('update', $brochureRequest);
 
         $validated = $request->validated();
 
@@ -81,7 +81,7 @@ class BrochureRequestController extends Controller
      */
     public function destroy(Request $request, BrochureRequest $brochureRequest)
     {
-        $this->authorize('delete', $brochureRequest);
+        // $this->authorize('delete', $brochureRequest);
 
         $brochureRequest->delete();
 

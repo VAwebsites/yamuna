@@ -19,7 +19,7 @@ class HomepageSettingController extends Controller
      */
     public function index(Request $request)
     {
-        $this->authorize('view-any', HomepageSetting::class);
+        // $this->authorize('view-any', HomepageSetting::class);
 
         $search = $request->get('search', '');
 
@@ -36,7 +36,7 @@ class HomepageSettingController extends Controller
      */
     public function store(HomepageSettingStoreRequest $request)
     {
-        $this->authorize('create', HomepageSetting::class);
+        // $this->authorize('create', HomepageSetting::class);
 
         $validated = $request->validated();
         if ($request->hasFile('logo')) {
@@ -61,7 +61,7 @@ class HomepageSettingController extends Controller
      */
     public function show(Request $request, HomepageSetting $homepageSetting)
     {
-        $this->authorize('view', $homepageSetting);
+        // $this->authorize('view', $homepageSetting);
 
         return new HomepageSettingResource($homepageSetting);
     }
@@ -75,7 +75,7 @@ class HomepageSettingController extends Controller
         HomepageSettingUpdateRequest $request,
         HomepageSetting $homepageSetting
     ) {
-        $this->authorize('update', $homepageSetting);
+        // $this->authorize('update', $homepageSetting);
 
         $validated = $request->validated();
 
@@ -109,7 +109,7 @@ class HomepageSettingController extends Controller
      */
     public function destroy(Request $request, HomepageSetting $homepageSetting)
     {
-        $this->authorize('delete', $homepageSetting);
+        // $this->authorize('delete', $homepageSetting);
 
         if ($homepageSetting->logo) {
             Storage::delete($homepageSetting->logo);

@@ -25,6 +25,16 @@
             <div class="mt-5">
                 <div>
                     <x-inputs.group class="w-full">
+                        <x-inputs.text
+                            name="approvedBank.name"
+                            label="Name"
+                            wire:model="approvedBank.name"
+                            maxlength="255"
+                            placeholder="Name"
+                        ></x-inputs.text>
+                    </x-inputs.group>
+
+                    <x-inputs.group class="w-full">
                         <div
                             image-url="{{ $editing && $approvedBank->logo ? \Storage::url($approvedBank->logo) : '' }}"
                             x-data="imageViewer()"
@@ -77,16 +87,6 @@
                             @enderror
                         </div>
                     </x-inputs.group>
-
-                    <x-inputs.group class="w-full">
-                        <x-inputs.text
-                            name="approvedBank.name"
-                            label="Name"
-                            wire:model="approvedBank.name"
-                            maxlength="255"
-                            placeholder="Name"
-                        ></x-inputs.text>
-                    </x-inputs.group>
                 </div>
             </div>
         </div>
@@ -125,10 +125,10 @@
                         />
                     </th>
                     <th class="px-4 py-3 text-left">
-                        @lang('crud.homepage_setting_approved_banks.inputs.logo')
+                        @lang('crud.homepage_setting_approved_banks.inputs.name')
                     </th>
                     <th class="px-4 py-3 text-left">
-                        @lang('crud.homepage_setting_approved_banks.inputs.name')
+                        @lang('crud.homepage_setting_approved_banks.inputs.logo')
                     </th>
                     <th></th>
                 </tr>
@@ -144,12 +144,12 @@
                         />
                     </td>
                     <td class="px-4 py-3 text-left">
+                        {{ $approvedBank->name ?? '-' }}
+                    </td>
+                    <td class="px-4 py-3 text-left">
                         <x-partials.thumbnail
                             src="{{ $approvedBank->logo ? \Storage::url($approvedBank->logo) : '' }}"
                         />
-                    </td>
-                    <td class="px-4 py-3 text-left">
-                        {{ $approvedBank->name ?? '-' }}
                     </td>
                     <td class="px-4 py-3 text-right" style="width: 134px;">
                         <div

@@ -16,7 +16,7 @@ class HomepageSettingController extends Controller
      */
     public function index(Request $request)
     {
-        $this->authorize('view-any', HomepageSetting::class);
+        // $this->authorize('view-any', HomepageSetting::class);
 
         $search = $request->get('search', '');
 

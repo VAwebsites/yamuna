@@ -17,7 +17,7 @@ class HomepageSettingApprovedBanksController extends Controller
      */
     public function index(Request $request, HomepageSetting $homepageSetting)
     {
-        $this->authorize('view', $homepageSetting);
+        // $this->authorize('view', $homepageSetting);
 
         $search = $request->get('search', '');
 
@@ -37,10 +37,10 @@ class HomepageSettingApprovedBanksController extends Controller
      */
     public function store(Request $request, HomepageSetting $homepageSetting)
     {
-        $this->authorize('create', ApprovedBank::class);
+        // $this->authorize('create', ApprovedBank::class);
 
         $validated = $request->validate([
-            'logo' => ['image', 'max:1024'],
+            'logo' => ['required'],
             'name' => ['required', 'max:255', 'string'],
         ]);
 

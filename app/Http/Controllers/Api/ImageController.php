@@ -19,7 +19,7 @@ class ImageController extends Controller
      */
     public function index(Request $request)
     {
-        $this->authorize('view-any', Image::class);
+        // $this->authorize('view-any', Image::class);
 
         $search = $request->get('search', '');
 
@@ -36,7 +36,7 @@ class ImageController extends Controller
      */
     public function store(ImageStoreRequest $request)
     {
-        $this->authorize('create', Image::class);
+        // $this->authorize('create', Image::class);
 
         $validated = $request->validated();
         if ($request->hasFile('img_path')) {
@@ -57,7 +57,7 @@ class ImageController extends Controller
      */
     public function show(Request $request, Image $image)
     {
-        $this->authorize('view', $image);
+        // $this->authorize('view', $image);
 
         return new ImageResource($image);
     }
@@ -69,7 +69,7 @@ class ImageController extends Controller
      */
     public function update(ImageUpdateRequest $request, Image $image)
     {
-        $this->authorize('update', $image);
+        // $this->authorize('update', $image);
 
         $validated = $request->validated();
 
@@ -95,7 +95,7 @@ class ImageController extends Controller
      */
     public function destroy(Request $request, Image $image)
     {
-        $this->authorize('delete', $image);
+        // $this->authorize('delete', $image);
 
         if ($image->img_path) {
             Storage::delete($image->img_path);

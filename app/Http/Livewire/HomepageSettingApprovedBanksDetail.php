@@ -29,8 +29,8 @@ class HomepageSettingApprovedBanksDetail extends Component
     public $modalTitle = 'New ApprovedBank';
 
     protected $rules = [
-        'approvedBankLogo' => ['image', 'max:1024'],
         'approvedBank.name' => ['required', 'max:255', 'string'],
+        'approvedBankLogo' => ['image', 'max:1024'],
     ];
 
     public function mount(HomepageSetting $homepageSetting)

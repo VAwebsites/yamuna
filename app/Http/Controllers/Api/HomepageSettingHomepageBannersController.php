@@ -17,7 +17,7 @@ class HomepageSettingHomepageBannersController extends Controller
      */
     public function index(Request $request, HomepageSetting $homepageSetting)
     {
-        $this->authorize('view', $homepageSetting);
+        // $this->authorize('view', $homepageSetting);
 
         $search = $request->get('search', '');
 
@@ -37,10 +37,10 @@ class HomepageSettingHomepageBannersController extends Controller
      */
     public function store(Request $request, HomepageSetting $homepageSetting)
     {
-        $this->authorize('create', HomepageBanner::class);
+        // $this->authorize('create', HomepageBanner::class);
 
         $validated = $request->validate([
-            'banner' => ['image', 'max:1024'],
+            'banner' => ['required'],
         ]);
 
         if ($request->hasFile('banner')) {

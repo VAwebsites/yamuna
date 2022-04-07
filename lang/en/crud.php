@@ -103,6 +103,20 @@ return [
         ],
     ],
 
+    'brochure_requests' => [
+        'name' => 'Brochure Requests',
+        'index_title' => 'BrochureRequests List',
+        'new_title' => 'New Brochure request',
+        'create_title' => 'Create BrochureRequest',
+        'edit_title' => 'Edit BrochureRequest',
+        'show_title' => 'Show BrochureRequest',
+        'inputs' => [
+            'name' => 'Name',
+            'email' => 'Email',
+            'phone' => 'Phone',
+        ],
+    ],
+
     'homepage_setting_homepage_banners' => [
         'name' => 'HomepageSetting Homepage Banners',
         'index_title' => 'HomepageBanners List',
@@ -123,22 +137,8 @@ return [
         'edit_title' => 'Edit ApprovedBank',
         'show_title' => 'Show ApprovedBank',
         'inputs' => [
+            'name' => 'Name',
             'logo' => 'Logo',
-            'name' => 'Name',
-        ],
-    ],
-
-    'brochure_requests' => [
-        'name' => 'Brochure Requests',
-        'index_title' => 'BrochureRequests List',
-        'new_title' => 'New Brochure request',
-        'create_title' => 'Create BrochureRequest',
-        'edit_title' => 'Edit BrochureRequest',
-        'show_title' => 'Show BrochureRequest',
-        'inputs' => [
-            'name' => 'Name',
-            'email' => 'Email',
-            'phone' => 'Phone',
         ],
     ],
 

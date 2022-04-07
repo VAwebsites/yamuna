@@ -19,7 +19,7 @@ class VillaController extends Controller
      */
     public function index(Request $request)
     {
-        $this->authorize('view-any', Villa::class);
+        // $this->authorize('view-any', Villa::class);
 
         $search = $request->get('search', '');
 
