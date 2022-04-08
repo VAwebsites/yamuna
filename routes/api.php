@@ -70,4 +70,8 @@ Route::name('api.')->group(function () {
     Route::apiResource('images', ImageController::class);
 
     Route::apiResource('brochure-requests', BrochureRequestController::class);
+
+    Route::apiResource('homepage-banners', HomepageBannerController::class);
+
+    Route::apiResource('approved-banks', ApprovedBankController::class);
 });

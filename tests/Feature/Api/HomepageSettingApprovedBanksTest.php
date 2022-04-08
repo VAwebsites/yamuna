@@ -65,8 +65,6 @@ class HomepageSettingApprovedBanksTest extends TestCase
             $data
         );
 
-        unset($data['homepage_setting_id']);
-
         $this->assertDatabaseHas('approved_banks', $data);
 
         $response->assertStatus(201)->assertJsonFragment($data);

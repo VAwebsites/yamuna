@@ -65,8 +65,6 @@ class HomepageSettingHomepageBannersTest extends TestCase
             $data
         );
 
-        unset($data['homepage_setting_id']);
-
         $this->assertDatabaseHas('homepage_banners', $data);
 
         $response->assertStatus(201)->assertJsonFragment($data);

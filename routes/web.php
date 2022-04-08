@@ -7,6 +7,8 @@ use App\Http\Controllers\RoleController;
 use App\Http\Controllers\VillaController;
 use App\Http\Controllers\ImageController;
 use App\Http\Controllers\PermissionController;
+use App\Http\Controllers\ApprovedBankController;
+use App\Http\Controllers\HomepageBannerController;
 use App\Http\Controllers\HomepageSettingController;
 use App\Http\Controllers\BrochureRequestController;
 
@@ -42,4 +44,6 @@ Route::prefix('/')
         Route::resource('villas', VillaController::class);
         Route::resource('images', ImageController::class);
         Route::resource('brochure-requests', BrochureRequestController::class);
+        Route::resource('homepage-banners', HomepageBannerController::class);
+        Route::resource('approved-banks', ApprovedBankController::class);
     });

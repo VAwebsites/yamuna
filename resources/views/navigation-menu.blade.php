@@ -24,8 +24,7 @@
                         </x-dropdown-link>
                         @endcan
                         @can('view-any', App\Models\HomepageSetting::class)
-                        <x-dropdown-link href="{{ url('homepage-settings/1/edit') }}">
-                        {{-- <x-dropdown-link href="{{ route('homepage-settings.index') }}"> --}}
+                        <x-dropdown-link href="{{ route('homepage-settings.index') }}">
                         Homepage Settings
                         </x-dropdown-link>
                         @endcan
@@ -42,6 +41,16 @@
                         @can('view-any', App\Models\BrochureRequest::class)
                         <x-dropdown-link href="{{ route('brochure-requests.index') }}">
                         Brochure Requests
+                        </x-dropdown-link>
+                        @endcan
+                        @can('view-any', App\Models\HomepageBanner::class)
+                        <x-dropdown-link href="{{ route('homepage-banners.index') }}">
+                        Homepage Banners
+                        </x-dropdown-link>
+                        @endcan
+                        @can('view-any', App\Models\ApprovedBank::class)
+                        <x-dropdown-link href="{{ route('approved-banks.index') }}">
+                        Approved Banks
                         </x-dropdown-link>
                         @endcan
                 </x-nav-dropdown>
@@ -209,6 +218,16 @@
                 @can('view-any', App\Models\BrochureRequest::class)
                 <x-jet-responsive-nav-link href="{{ route('brochure-requests.index') }}">
                 Brochure Requests
+                </x-jet-responsive-nav-link>
+                @endcan
+                @can('view-any', App\Models\HomepageBanner::class)
+                <x-jet-responsive-nav-link href="{{ route('homepage-banners.index') }}">
+                Homepage Banners
+                </x-jet-responsive-nav-link>
+                @endcan
+                @can('view-any', App\Models\ApprovedBank::class)
+                <x-jet-responsive-nav-link href="{{ route('approved-banks.index') }}">
+                Approved Banks
                 </x-jet-responsive-nav-link>
                 @endcan
 

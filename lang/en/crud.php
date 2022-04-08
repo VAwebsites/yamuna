@@ -142,6 +142,33 @@ return [
         ],
     ],
 
+    'homepage_banners' => [
+        'name' => 'Homepage Banners',
+        'index_title' => 'HomepageBanners List',
+        'new_title' => 'New Homepage banner',
+        'create_title' => 'Create HomepageBanner',
+        'edit_title' => 'Edit HomepageBanner',
+        'show_title' => 'Show HomepageBanner',
+        'inputs' => [
+            'homepage_setting_id' => 'Homepage Setting',
+            'banner' => 'Banner',
+        ],
+    ],
+
+    'approved_banks' => [
+        'name' => 'Approved Banks',
+        'index_title' => 'ApprovedBanks List',
+        'new_title' => 'New Approved bank',
+        'create_title' => 'Create ApprovedBank',
+        'edit_title' => 'Edit ApprovedBank',
+        'show_title' => 'Show ApprovedBank',
+        'inputs' => [
+            'name' => 'Name',
+            'homepage_setting_id' => 'Homepage Setting',
+            'logo' => 'Logo',
+        ],
+    ],
+
     'roles' => [
         'name' => 'Roles',
         'index_title' => 'Roles List',
