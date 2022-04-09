@@ -52,7 +52,7 @@ class HomepageSettingController extends Controller
 
         $validated = $request->validated();
         if ($request->hasFile('logo')) {
-            $validated['logo'] = $request->file('logo')->store('public');
+            $validated['logo'] = Storage::put('photos', $request->file('logo'));
         }
 
         if ($request->hasFile('brochure')) {
@@ -109,9 +109,10 @@ class HomepageSettingController extends Controller
                 Storage::delete($homepageSetting->logo);
             }
 
-            $validated['logo'] = $request->file('logo')->store('public');
+            $validated['logo'] = Storage::put('photos', $request->file('logo'));
         }
 
+        dd($validated['logo'] );
         if ($request->hasFile('brochure')) {
             if ($homepageSetting->brochure) {
                 Storage::delete($homepageSetting->brochure);
@@ -119,7 +120,7 @@ class HomepageSettingController extends Controller
 
             $validated['brochure'] = $request
                 ->file('brochure')
-                ->store('public');
+                ->store('photos');
         }
 
         $homepageSetting->update($validated);
