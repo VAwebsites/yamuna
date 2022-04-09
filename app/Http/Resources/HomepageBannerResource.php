@@ -16,7 +16,7 @@ class HomepageBannerResource extends JsonResource
     {
         return [
             'id' => $this->id,
-            'banner' => $this->banner ? asset(\Storage::url($this->banner->orderBy('order', 'ASC'))) : '',
+            'banner' => $this->banner ? asset(\Storage::url($this->banner)) : '',
         ];
     }
 }

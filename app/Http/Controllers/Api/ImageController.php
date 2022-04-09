@@ -24,8 +24,7 @@ class ImageController extends Controller
         $search = $request->get('search', '');
 
         $images = Image::search($search)
-            ->latest()
-            ->paginate();
+        ->orderBy('order', 'ASC')->get();
 
         return new ImageCollection($images);
     }
