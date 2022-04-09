@@ -29,6 +29,7 @@ class HomepageSettingResource extends JsonResource
       "address_line_1" => $this->address_line_1,
       "address_line_2" => $this->address_line_2,
       "contact_number" => $this->contact_number,
+      "email" => $this->email,
       "footer_description" => $this->footer_description,
       "logo" =>  $this->logo ? asset(\Storage::url($this->logo)) : '',
       'banners' => HomepageBannerResource::collection($this->homepageBanners), 
