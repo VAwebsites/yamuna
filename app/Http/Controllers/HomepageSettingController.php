@@ -112,7 +112,6 @@ class HomepageSettingController extends Controller
             $validated['logo'] = Storage::put('photos', $request->file('logo'));
         }
 
-        dd($validated['logo'] );
         if ($request->hasFile('brochure')) {
             if ($homepageSetting->brochure) {
                 Storage::delete($homepageSetting->brochure);
