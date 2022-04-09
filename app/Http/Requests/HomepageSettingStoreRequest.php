@@ -37,7 +37,7 @@ class HomepageSettingStoreRequest extends FormRequest
             'address_line_2' => ['nullable', 'max:255', 'string'],
             'contact_number' => ['nullable', 'max:255', 'string'],
             'email' => ['nullable', 'email'],
-            'footer_description' => ['nullable', 'max:255', 'string'],
+            'footer_description' => ['nullable', 'string'],
         ];
     }
 }
