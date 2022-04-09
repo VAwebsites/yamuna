@@ -57,7 +57,7 @@ class VillaController extends Controller
      */
     public function show(Request $request, Villa $villa)
     {
-        $this->authorize('view', $villa);
+        // $this->authorize('view', $villa);
 
         return new VillaResource($villa);
     }
