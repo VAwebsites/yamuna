@@ -24,12 +24,12 @@ use App\Http\Controllers\BrochureRequestController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect()->route('login');
 });
 
 Route::middleware(['auth:sanctum', 'verified'])
     ->get('/dashboard', function () {
-        return view('dashboard');
+        return redirect('/homepage-settings/1/edit');
     })
     ->name('dashboard');
 

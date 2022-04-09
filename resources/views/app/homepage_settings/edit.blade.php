@@ -59,7 +59,7 @@
                 </x-form>
             </x-partials.card>
 
-            @can('view-any', App\Models\HomepageBanner::class)
+            {{-- @can('view-any', App\Models\HomepageBanner::class)
             <x-partials.card class="mt-5">
                 <x-slot name="title"> Homepage Banners </x-slot>
 
@@ -75,7 +75,7 @@
                     :homepageSetting="$homepageSetting"
                 />
             </x-partials.card>
-            @endcan
+            @endcan --}}
         </div>
     </div>
 </x-app-layout>

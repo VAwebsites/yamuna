@@ -6,7 +6,8 @@
                 <!-- Logo -->
                 <div class="shrink-0 flex items-center">
                     <a href="{{ route('dashboard') }}">
-                        <x-jet-application-mark class="block h-9 w-auto" />
+                        {{-- <x-jet-application-mark class="block h-9 w-auto" /> --}}
+                        <img src="{{asset('logo.webp')}}" alt="" srcset="" width="100">
                     </a>
                 </div>
 
@@ -17,14 +18,14 @@
                     </x-jet-nav-link>
                 </div>
 
-                <x-nav-dropdown title="Apps" align="right" width="48">
+                <x-nav-dropdown title="Settings" align="right" width="48">
                         @can('view-any', App\Models\User::class)
                         <x-dropdown-link href="{{ route('users.index') }}">
                         Users
                         </x-dropdown-link>
                         @endcan
                         @can('view-any', App\Models\HomepageSetting::class)
-                        <x-dropdown-link href="{{ route('homepage-settings.index') }}">
+                        <x-dropdown-link href="{{ url('/homepage-settings/1/edit') }}">
                         Homepage Settings
                         </x-dropdown-link>
                         @endcan
