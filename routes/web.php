@@ -11,7 +11,7 @@ use App\Http\Controllers\ApprovedBankController;
 use App\Http\Controllers\HomepageBannerController;
 use App\Http\Controllers\HomepageSettingController;
 use App\Http\Controllers\BrochureRequestController;
-
+use App\Http\Controllers\VillaImageController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -46,4 +46,5 @@ Route::prefix('/')
         Route::resource('brochure-requests', BrochureRequestController::class);
         Route::resource('homepage-banners', HomepageBannerController::class);
         Route::resource('approved-banks', ApprovedBankController::class);
+        Route::resource('villa-images', VillaImageController::class);
     });

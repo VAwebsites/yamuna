@@ -59,8 +59,6 @@ class VillaVillaImagesTest extends TestCase
             $data
         );
 
-        unset($data['villa_id']);
-
         $this->assertDatabaseHas('villa_images', $data);
 
         $response->assertStatus(201)->assertJsonFragment($data);

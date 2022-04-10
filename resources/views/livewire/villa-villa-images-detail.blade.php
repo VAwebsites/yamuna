@@ -1,10 +1,11 @@
 <div>
     <div>
         @can('create', App\Models\VillaImage::class)
-        <button class="button" wire:click="newVillaImage">
+        {{-- <button class="button" wire:click="newVillaImage">
             <i class="mr-1 icon ion-md-add text-primary"></i>
             @lang('crud.common.new')
-        </button>
+        </button> --}}
+        <a class="btn btn-primary" href="{{url('/villa-images/create?villa_id='.$villa->id)}}"> <i class="mr-1 icon ion-md-add text-primary"></i> Add image</a>
         @endcan @can('delete-any', App\Models\VillaImage::class)
         <button
             class="button button-danger"
@@ -142,13 +143,14 @@
                             class="relative inline-flex align-middle"
                         >
                             @can('update', $villaImage)
-                            <button
-                                type="button"
+                            <a
+                               
                                 class="button"
-                                wire:click="editVillaImage({{ $villaImage->id }})"
+                                href="{{url('villa-images/'.$villaImage->id.'/edit')}}"
+                                {{-- wire:click="editVillaImage({{ $villaImage->id }})" --}}
                             >
                                 <i class="icon ion-md-create"></i>
-                            </button>
+                    </a>
                             @endcan
                         </div>
                     </td>

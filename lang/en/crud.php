@@ -169,6 +169,19 @@ return [
         ],
     ],
 
+    'villa_images' => [
+        'name' => 'Villa Images',
+        'index_title' => 'VillaImages List',
+        'new_title' => 'New Villa image',
+        'create_title' => 'Create VillaImage',
+        'edit_title' => 'Edit VillaImage',
+        'show_title' => 'Show VillaImage',
+        'inputs' => [
+            'villa_id' => 'Villa',
+            'image' => 'Image',
+        ],
+    ],
+
     'roles' => [
         'name' => 'Roles',
         'index_title' => 'Roles List',

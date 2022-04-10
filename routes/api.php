@@ -74,4 +74,6 @@ Route::name('api.')->group(function () {
     Route::apiResource('homepage-banners', HomepageBannerController::class);
 
     Route::apiResource('approved-banks', ApprovedBankController::class);
+
+    Route::apiResource('villa-images', VillaImageController::class);
 });
