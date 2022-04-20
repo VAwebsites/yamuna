@@ -2,7 +2,8 @@
     <x-jet-authentication-card>
         <x-slot name="logo">
             {{-- <x-jet-authentication-card-logo /> --}}
-            <img src="{{asset('logo.webp')}}" class="content-center" alt="" srcset="" width="200">
+            {{-- <img src="{{asset('logo.webp')}}" class="content-center" alt="" srcset="" width="200"> --}}
+            Admin Panel
         </x-slot>
 
         <x-jet-validation-errors class="mb-4" />

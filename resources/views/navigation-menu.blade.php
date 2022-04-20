@@ -7,7 +7,8 @@
                 <div class="shrink-0 flex items-center">
                     <a href="{{ route('dashboard') }}">
                         {{-- <x-jet-application-mark class="block h-9 w-auto" /> --}}
-                        <img src="{{asset('logo.webp')}}" alt="" srcset="" width="100">
+                        {{-- <img src="{{asset('logo.webp')}}" alt="" srcset="" width="100"> --}}
+                   Admin Panel
                     </a>
                 </div>
 
