@@ -17,6 +17,7 @@ return new class extends Migration {
             $table->longText('img');
             $table->mediumText('name');
             $table->integer('order')->nullable();
+            $table->string('distance')->nullable();
 
             $table->timestamps();
         });

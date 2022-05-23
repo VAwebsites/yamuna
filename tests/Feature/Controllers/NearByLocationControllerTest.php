@@ -118,6 +118,7 @@ class NearByLocationControllerTest extends TestCase
             'img' => $this->faker->text,
             'name' => $this->faker->text,
             'order' => $this->faker->randomNumber(0),
+            'distance' => $this->faker->text(255),
         ];
 
         $response = $this->put(

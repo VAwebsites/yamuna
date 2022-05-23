@@ -18,6 +18,7 @@ class NearByLocationResource extends JsonResource
             'id' => $this->id,
             'name' => $this->name,
             'order' => $this->order,
+            'distance' => $this->distance,
             'img' => $this->img ? asset(\Storage::url($this->img)) : '',
         ];
     }

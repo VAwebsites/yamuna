@@ -27,6 +27,7 @@ class NearByLocationStoreRequest extends FormRequest
             'img' => ['image'],
             'name' => ['required', 'max:255', 'string'],
             'order' => ['nullable', 'numeric'],
+            'distance' => ['nullable', 'max:255', 'string'],
         ];
     }
 }

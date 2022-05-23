@@ -11,7 +11,7 @@ class NearByLocation extends Model
     use HasFactory;
     use Searchable;
 
-    protected $fillable = ['img', 'name', 'order'];
+    protected $fillable = ['img', 'name', 'order', 'distance'];
 
     protected $searchableFields = ['*'];
 

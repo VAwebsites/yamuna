@@ -36,7 +36,7 @@
         </div>
     </x-inputs.group>
 
-    <x-inputs.group class="w-full lg:w-6/12">
+    <x-inputs.group class="w-full lg:w-4/12">
         <x-inputs.text
             name="name"
             label="Name"
@@ -47,12 +47,22 @@
         ></x-inputs.text>
     </x-inputs.group>
 
-    <x-inputs.group class="w-full lg:w-6/12">
+    <x-inputs.group class="w-full lg:w-4/12">
         <x-inputs.number
             name="order"
             label="Order"
             value="{{ old('order', ($editing ? $nearByLocation->order : '')) }}"
             placeholder="Order"
         ></x-inputs.number>
+    </x-inputs.group>
+
+    <x-inputs.group class="w-full lg:w-4/12">
+        <x-inputs.text
+            name="distance"
+            label="Distance"
+            value="{{ old('distance', ($editing ? $nearByLocation->distance : '')) }}"
+            maxlength="255"
+            placeholder="Distance"
+        ></x-inputs.text>
     </x-inputs.group>
 </div>

@@ -58,6 +58,9 @@
                                 <th class="px-4 py-3 text-right">
                                     @lang('crud.near_by_locations.inputs.order')
                                 </th>
+                                <th class="px-4 py-3 text-left">
+                                    @lang('crud.near_by_locations.inputs.distance')
+                                </th>
                                 <th></th>
                             </tr>
                         </thead>
@@ -74,6 +77,9 @@
                                 </td>
                                 <td class="px-4 py-3 text-right">
                                     {{ $nearByLocation->order ?? '-' }}
+                                </td>
+                                <td class="px-4 py-3 text-left">
+                                    {{ $nearByLocation->distance ?? '-' }}
                                 </td>
                                 <td
                                     class="px-4 py-3 text-center"
@@ -140,7 +146,7 @@
                             </tr>
                             @empty
                             <tr>
-                                <td colspan="4">
+                                <td colspan="5">
                                     @lang('crud.common.no_items_found')
                                 </td>
                             </tr>
@@ -148,7 +154,7 @@
                         </tbody>
                         <tfoot>
                             <tr>
-                                <td colspan="4">
+                                <td colspan="5">
                                     <div class="mt-10 px-4">
                                         {!! $nearByLocations->render() !!}
                                     </div>

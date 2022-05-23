@@ -38,6 +38,12 @@
                         </h5>
                         <span>{{ $nearByLocation->order ?? '-' }}</span>
                     </div>
+                    <div class="mb-4">
+                        <h5 class="font-medium text-gray-700">
+                            @lang('crud.near_by_locations.inputs.distance')
+                        </h5>
+                        <span>{{ $nearByLocation->distance ?? '-' }}</span>
+                    </div>
                 </div>
 
                 <div class="mt-10">
