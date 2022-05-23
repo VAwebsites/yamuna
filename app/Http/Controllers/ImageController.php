@@ -22,7 +22,7 @@ class ImageController extends Controller
 
         $images = Image::search($search)
             ->latest()
-            ->paginate(5)
+            ->paginate(50)
             ->withQueryString();
 
         return view('app.images.index', compact('images', 'search'));
