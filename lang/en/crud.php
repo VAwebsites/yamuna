@@ -193,6 +193,7 @@ return [
             'img' => 'Img',
             'name' => 'Name',
             'order' => 'Order',
+            'distance' => 'Distance',
         ],
     ],
 
