@@ -36,7 +36,7 @@ class HomepageSetting extends Model
 
     public function approvedBanks()
     {
-        return $this->hasMany(ApprovedBank::class);
+        return $this->hasMany(ApprovedBank::class)->orderBy('order');;
     }
 
     public function homepageBanners()

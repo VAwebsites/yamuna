@@ -35,7 +35,7 @@ class HomepageSettingResource extends JsonResource
       "footer_description" => $this->footer_description,
       "logo" =>  $this->logo ? asset(\Storage::url($this->logo)) : '',
       'banners' => HomepageBannerResource::collection($this->homepageBanners), 
-      'approved_banks' => ApprovedBankResource::collection($this->approvedBanks->orderBy('order', 'ASC')), 
+      'approved_banks' => ApprovedBankResource::collection($this->approvedBanks), 
         ];
     }
 }
