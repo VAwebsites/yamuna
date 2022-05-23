@@ -37,6 +37,9 @@ class HomepageSettingUpdateRequest extends FormRequest
             'contact_number' => ['nullable', 'max:255', 'string'],
             'email' => ['nullable', 'email'],
             'footer_description' => ['nullable', 'string'],
+            
+            'youtube_link_2' => ['nullable', 'max:255', 'string'],
+            'youtube_link_3' => ['nullable', 'max:255', 'string'],
         ];
     }
 }
