@@ -15,6 +15,7 @@ use App\Http\Controllers\Api\BrochureRequestController;
 use App\Http\Controllers\Api\VillaVillaImagesController;
 use App\Http\Controllers\Api\HomepageSettingApprovedBanksController;
 use App\Http\Controllers\Api\HomepageSettingHomepageBannersController;
+use App\Http\Controllers\Api\NearByLocationController;
 
 /*
 |--------------------------------------------------------------------------
@@ -76,4 +77,5 @@ Route::name('api.')->group(function () {
     Route::apiResource('approved-banks', ApprovedBankController::class);
 
     Route::apiResource('villa-images', VillaImageController::class);
+    Route::apiResource('near-by-locations', NearByLocationController::class);
 });

@@ -40,7 +40,7 @@ class VillaVillaImagesController extends Controller
         $this->authorize('create', VillaImage::class);
 
         $validated = $request->validate([
-            'image' => ['image', 'max:1024'],
+            'image' => ['image'],
         ]);
 
         if ($request->hasFile('image')) {

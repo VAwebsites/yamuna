@@ -24,7 +24,7 @@ class ImageStoreRequest extends FormRequest
     public function rules()
     {
         return [
-            'img_path' => ['image', 'max:1024'],
+            'img_path' => ['image'],
             'order' => ['required', 'numeric'],
         ];
     }

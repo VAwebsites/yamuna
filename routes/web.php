@@ -12,6 +12,7 @@ use App\Http\Controllers\HomepageBannerController;
 use App\Http\Controllers\HomepageSettingController;
 use App\Http\Controllers\BrochureRequestController;
 use App\Http\Controllers\VillaImageController;
+use App\Http\Controllers\NearByLocationController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -47,4 +48,5 @@ Route::prefix('/')
         Route::resource('homepage-banners', HomepageBannerController::class);
         Route::resource('approved-banks', ApprovedBankController::class);
         Route::resource('villa-images', VillaImageController::class);
+        Route::resource('near-by-locations', NearByLocationController::class);
     });

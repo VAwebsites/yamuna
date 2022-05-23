@@ -29,7 +29,7 @@ class VillaVillaImagesDetail extends Component
     public $modalTitle = 'New VillaImage';
 
     protected $rules = [
-        'villaImageImage' => ['image', 'max:1024'],
+        'villaImageImage' => ['image'],
     ];
 
     public function mount(Villa $villa)

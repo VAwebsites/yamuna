@@ -55,6 +55,10 @@
                         Approved Banks
                         </x-dropdown-link>
                         @endcan
+                        
+                        <x-jet-responsive-nav-link href="{{ route('near-by-locations.index') }}">
+                            Near By Locations
+                            </x-jet-responsive-nav-link>
                 </x-nav-dropdown>
 
                     @if (Auth::user()->can('view-any', Spatie\Permission\Models\Role::class) || 
@@ -68,6 +72,9 @@
                         @can('view-any', Spatie\Permission\Models\Permission::class)
                         <x-dropdown-link href="{{ route('permissions.index') }}">Permissions</x-dropdown-link>
                         @endcan
+
+            
+                       
                         
                     </x-nav-dropdown>
                     @endif

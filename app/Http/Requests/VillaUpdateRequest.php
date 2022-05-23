@@ -24,7 +24,7 @@ class VillaUpdateRequest extends FormRequest
     public function rules()
     {
         return [
-            'thumbnail' => ['image', 'max:1024'],
+            'thumbnail' => ['image'],
             'description' => ['nullable', 'string'],
             'bhk' => ['required', 'numeric'],
             'sq_feet' => ['required', 'numeric'],
