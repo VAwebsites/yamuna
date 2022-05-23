@@ -23,7 +23,11 @@
                     @include('app.villa_images.form-inputs')
 
                     <div class="mt-10">
+<<<<<<< HEAD
                         {{-- <a
+=======
+                        <a
+>>>>>>> master
                             href="{{ route('villa-images.index') }}"
                             class="button"
                         >
@@ -36,7 +40,11 @@
                                 "
                             ></i>
                             @lang('crud.common.back')
+<<<<<<< HEAD
                         </a> --}}
+=======
+                        </a>
+>>>>>>> master
 
                         <button
                             type="submit"

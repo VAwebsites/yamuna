@@ -1,42 +1,31 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            @lang('crud.villa_images.edit_title')
+            @lang('crud.near_by_locations.edit_title')
         </h2>
     </x-slot>
 
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <x-partials.card>
-<<<<<<< HEAD
-                {{-- <x-slot name="title">
-                    <a href="{{ route('villa-images.index') }}" class="mr-4"
-                        ><i class="mr-1 icon ion-md-arrow-back"></i
-                    ></a>
-                </x-slot> --}}
-=======
                 <x-slot name="title">
-                    <a href="{{ route('villa-images.index') }}" class="mr-4"
+                    <a
+                        href="{{ route('near-by-locations.index') }}"
+                        class="mr-4"
                         ><i class="mr-1 icon ion-md-arrow-back"></i
                     ></a>
                 </x-slot>
->>>>>>> master
 
                 <x-form
                     method="PUT"
-                    action="{{ route('villa-images.update', $villaImage) }}"
-                    has-files
+                    action="{{ route('near-by-locations.update', $nearByLocation) }}"
                     class="mt-4"
                 >
-                    @include('app.villa_images.form-inputs')
+                    @include('app.near_by_locations.form-inputs')
 
                     <div class="mt-10">
-<<<<<<< HEAD
-                        {{-- <a
-=======
                         <a
->>>>>>> master
-                            href="{{ route('villa-images.index') }}"
+                            href="{{ route('near-by-locations.index') }}"
                             class="button"
                         >
                             <i
@@ -48,15 +37,15 @@
                                 "
                             ></i>
                             @lang('crud.common.back')
-                        </a> --}}
+                        </a>
 
-                        {{-- <a
-                            href="{{ route('villa-images.create') }}"
+                        <a
+                            href="{{ route('near-by-locations.create') }}"
                             class="button"
                         >
                             <i class="mr-1 icon ion-md-add text-primary"></i>
                             @lang('crud.common.create')
-                        </a> --}}
+                        </a>
 
                         <button
                             type="submit"

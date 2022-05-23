@@ -22,13 +22,14 @@ class DatabaseSeeder extends Seeder
             ]);
         $this->call(PermissionsSeeder::class);
 
-        $this->call(ApprovedBankSeeder::class);
-        $this->call(BrochureRequestSeeder::class);
-        $this->call(HomepageBannerSeeder::class);
-        $this->call(HomepageSettingSeeder::class);
-        $this->call(ImageSeeder::class);
-        $this->call(UserSeeder::class);
-        $this->call(VillaSeeder::class);
-        $this->call(VillaImageSeeder::class);
+        // $this->call(ApprovedBankSeeder::class);
+        // $this->call(BrochureRequestSeeder::class);
+        // $this->call(HomepageBannerSeeder::class);
+        // $this->call(HomepageSettingSeeder::class);
+        // $this->call(ImageSeeder::class);
+        // $this->call(NearByLocationSeeder::class);
+        // $this->call(UserSeeder::class);
+        // $this->call(VillaSeeder::class);
+        // $this->call(VillaImageSeeder::class);
     }
 }

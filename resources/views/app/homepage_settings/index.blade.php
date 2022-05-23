@@ -91,6 +91,12 @@
                                 <th class="px-4 py-3 text-left">
                                     @lang('crud.homepage_settings.inputs.footer_description')
                                 </th>
+                                <th class="px-4 py-3 text-left">
+                                    @lang('crud.homepage_settings.inputs.youtube_link_2')
+                                </th>
+                                <th class="px-4 py-3 text-left">
+                                    @lang('crud.homepage_settings.inputs.youtube_link_3')
+                                </th>
                                 <th></th>
                             </tr>
                         </thead>
@@ -164,6 +170,14 @@
                                     {{ $homepageSetting->footer_description ??
                                     '-' }}
                                 </td>
+                                <td class="px-4 py-3 text-left">
+                                    {{ $homepageSetting->youtube_link_2 ?? '-'
+                                    }}
+                                </td>
+                                <td class="px-4 py-3 text-left">
+                                    {{ $homepageSetting->youtube_link_3 ?? '-'
+                                    }}
+                                </td>
                                 <td
                                     class="px-4 py-3 text-center"
                                     style="width: 134px;"
@@ -229,7 +243,7 @@
                             </tr>
                             @empty
                             <tr>
-                                <td colspan="15">
+                                <td colspan="17">
                                     @lang('crud.common.no_items_found')
                                 </td>
                             </tr>
@@ -237,7 +251,7 @@
                         </tbody>
                         <tfoot>
                             <tr>
-                                <td colspan="15">
+                                <td colspan="17">
                                     <div class="mt-10 px-4">
                                         {!! $homepageSettings->render() !!}
                                     </div>

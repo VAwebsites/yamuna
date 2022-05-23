@@ -166,4 +166,24 @@
             $homepageSetting->footer_description : '')) }}</x-inputs.textarea
         >
     </x-inputs.group>
+
+    <x-inputs.group class="w-full">
+        <x-inputs.text
+            name="youtube_link_2"
+            label="Youtube Link 2"
+            value="{{ old('youtube_link_2', ($editing ? $homepageSetting->youtube_link_2 : '')) }}"
+            maxlength="255"
+            placeholder="Youtube Link 2"
+        ></x-inputs.text>
+    </x-inputs.group>
+
+    <x-inputs.group class="w-full">
+        <x-inputs.text
+            name="youtube_link_3"
+            label="Youtube Link 3"
+            value="{{ old('youtube_link_3', ($editing ? $homepageSetting->youtube_link_3 : '')) }}"
+            maxlength="255"
+            placeholder="Youtube Link 3"
+        ></x-inputs.text>
+    </x-inputs.group>
 </div>

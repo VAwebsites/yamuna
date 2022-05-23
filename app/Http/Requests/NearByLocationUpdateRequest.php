@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class ApprovedBankStoreRequest extends FormRequest
+class NearByLocationUpdateRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -24,13 +24,9 @@ class ApprovedBankStoreRequest extends FormRequest
     public function rules()
     {
         return [
+            'img' => ['required', 'max:255', 'string'],
             'name' => ['required', 'max:255', 'string'],
-            'homepage_setting_id' => [
-                'required',
-                'exists:homepage_settings,id',
-            ],
-            'logo' => ['image', 'max:1024'],
-            'order' => ['required', 'numeric'],
+            'order' => ['nullable', 'numeric'],
         ];
     }
 }

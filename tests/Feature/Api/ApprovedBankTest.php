@@ -66,6 +66,7 @@ class ApprovedBankTest extends TestCase
         $data = [
             'name' => $this->faker->name,
             'logo' => $this->faker->text,
+            'order' => $this->faker->randomNumber(0),
             'homepage_setting_id' => $homepageSetting->id,
         ];
 

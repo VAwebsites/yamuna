@@ -37,6 +37,8 @@ class HomepageSettingFactory extends Factory
             'logo' => $this->faker->text,
             'email' => $this->faker->email,
             'footer_description' => $this->faker->text,
+            'youtube_link_2' => $this->faker->text,
+            'youtube_link_3' => $this->faker->text,
         ];
     }
 }

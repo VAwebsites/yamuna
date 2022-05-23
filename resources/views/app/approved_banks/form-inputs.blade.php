@@ -61,4 +61,15 @@
             @enderror
         </div>
     </x-inputs.group>
+
+    <x-inputs.group class="w-full lg:w-4/12">
+        <x-inputs.number
+            name="order"
+            label="Order"
+            value="{{ old('order', ($editing ? $approvedBank->order : '')) }}"
+            max="255"
+            placeholder="Order"
+            required
+        ></x-inputs.number>
+    </x-inputs.group>
 </div>

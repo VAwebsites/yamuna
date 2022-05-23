@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            @lang('crud.approved_banks.index_title')
+            @lang('crud.near_by_locations.index_title')
         </h2>
     </x-slot>
 
@@ -32,9 +32,9 @@
                             </form>
                         </div>
                         <div class="md:w-1/2 text-right">
-                            @can('create', App\Models\ApprovedBank::class)
+                            @can('create', App\Models\NearByLocation::class)
                             <a
-                                href="{{ route('approved-banks.create') }}"
+                                href="{{ route('near-by-locations.create') }}"
                                 class="button button-primary"
                             >
                                 <i class="mr-1 icon ion-md-add"></i>
@@ -50,45 +50,29 @@
                         <thead class="text-gray-700">
                             <tr>
                                 <th class="px-4 py-3 text-left">
-                                    @lang('crud.approved_banks.inputs.name')
+                                    @lang('crud.near_by_locations.inputs.img')
                                 </th>
                                 <th class="px-4 py-3 text-left">
-                                    @lang('crud.approved_banks.inputs.homepage_setting_id')
+                                    @lang('crud.near_by_locations.inputs.name')
                                 </th>
-                                <th class="px-4 py-3 text-left">
-                                    @lang('crud.approved_banks.inputs.logo')
-                                </th>
-<<<<<<< HEAD
-=======
                                 <th class="px-4 py-3 text-right">
-                                    @lang('crud.approved_banks.inputs.order')
+                                    @lang('crud.near_by_locations.inputs.order')
                                 </th>
->>>>>>> master
                                 <th></th>
                             </tr>
                         </thead>
                         <tbody class="text-gray-600">
-                            @forelse($approvedBanks as $approvedBank)
+                            @forelse($nearByLocations as $nearByLocation)
                             <tr class="hover:bg-gray-50">
                                 <td class="px-4 py-3 text-left">
-                                    {{ $approvedBank->name ?? '-' }}
+                                    {{ $nearByLocation->img ?? '-' }}
                                 </td>
                                 <td class="px-4 py-3 text-left">
-                                    {{
-                                    optional($approvedBank->homepageSetting)->project_title
-                                    ?? '-' }}
+                                    {{ $nearByLocation->name ?? '-' }}
                                 </td>
-                                <td class="px-4 py-3 text-left">
-                                    <x-partials.thumbnail
-                                        src="{{ $approvedBank->logo ? \Storage::url($approvedBank->logo) : '' }}"
-                                    />
-                                </td>
-<<<<<<< HEAD
-=======
                                 <td class="px-4 py-3 text-right">
-                                    {{ $approvedBank->order ?? '-' }}
+                                    {{ $nearByLocation->order ?? '-' }}
                                 </td>
->>>>>>> master
                                 <td
                                     class="px-4 py-3 text-center"
                                     style="width: 134px;"
@@ -102,9 +86,9 @@
                                             align-middle
                                         "
                                     >
-                                        @can('update', $approvedBank)
+                                        @can('update', $nearByLocation)
                                         <a
-                                            href="{{ route('approved-banks.edit', $approvedBank) }}"
+                                            href="{{ route('near-by-locations.edit', $nearByLocation) }}"
                                             class="mr-1"
                                         >
                                             <button
@@ -116,9 +100,9 @@
                                                 ></i>
                                             </button>
                                         </a>
-                                        @endcan @can('view', $approvedBank)
+                                        @endcan @can('view', $nearByLocation)
                                         <a
-                                            href="{{ route('approved-banks.show', $approvedBank) }}"
+                                            href="{{ route('near-by-locations.show', $nearByLocation) }}"
                                             class="mr-1"
                                         >
                                             <button
@@ -128,9 +112,9 @@
                                                 <i class="icon ion-md-eye"></i>
                                             </button>
                                         </a>
-                                        @endcan @can('delete', $approvedBank)
+                                        @endcan @can('delete', $nearByLocation)
                                         <form
-                                            action="{{ route('approved-banks.destroy', $approvedBank) }}"
+                                            action="{{ route('near-by-locations.destroy', $nearByLocation) }}"
                                             method="POST"
                                             onsubmit="return confirm('{{ __('crud.common.are_you_sure') }}')"
                                         >
@@ -154,11 +138,7 @@
                             </tr>
                             @empty
                             <tr>
-<<<<<<< HEAD
                                 <td colspan="4">
-=======
-                                <td colspan="5">
->>>>>>> master
                                     @lang('crud.common.no_items_found')
                                 </td>
                             </tr>
@@ -166,13 +146,9 @@
                         </tbody>
                         <tfoot>
                             <tr>
-<<<<<<< HEAD
                                 <td colspan="4">
-=======
-                                <td colspan="5">
->>>>>>> master
                                     <div class="mt-10 px-4">
-                                        {!! $approvedBanks->render() !!}
+                                        {!! $nearByLocations->render() !!}
                                     </div>
                                 </td>
                             </tr>

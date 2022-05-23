@@ -30,6 +30,7 @@ class ApprovedBankUpdateRequest extends FormRequest
                 'exists:homepage_settings,id',
             ],
             'logo' => ['image', 'max:1024'],
+            'order' => ['required', 'numeric'],
         ];
     }
 }

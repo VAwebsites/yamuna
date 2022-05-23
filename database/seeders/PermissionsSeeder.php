@@ -45,6 +45,12 @@ class PermissionsSeeder extends Seeder
         Permission::create(['name' => 'update images']);
         Permission::create(['name' => 'delete images']);
 
+        Permission::create(['name' => 'list nearbylocations']);
+        Permission::create(['name' => 'view nearbylocations']);
+        Permission::create(['name' => 'create nearbylocations']);
+        Permission::create(['name' => 'update nearbylocations']);
+        Permission::create(['name' => 'delete nearbylocations']);
+
         Permission::create(['name' => 'list villas']);
         Permission::create(['name' => 'view villas']);
         Permission::create(['name' => 'create villas']);
