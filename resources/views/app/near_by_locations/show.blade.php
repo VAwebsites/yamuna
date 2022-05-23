@@ -21,7 +21,10 @@
                         <h5 class="font-medium text-gray-700">
                             @lang('crud.near_by_locations.inputs.img')
                         </h5>
-                        <span>{{ $nearByLocation->img ?? '-' }}</span>
+                        <x-partials.thumbnail
+                            src="{{ $nearByLocation->img ? \Storage::url($nearByLocation->img) : '' }}"
+                            size="150"
+                        />
                     </div>
                     <div class="mb-4">
                         <h5 class="font-medium text-gray-700">

@@ -65,7 +65,9 @@
                             @forelse($nearByLocations as $nearByLocation)
                             <tr class="hover:bg-gray-50">
                                 <td class="px-4 py-3 text-left">
-                                    {{ $nearByLocation->img ?? '-' }}
+                                    <x-partials.thumbnail
+                                        src="{{ $nearByLocation->img ? \Storage::url($nearByLocation->img) : '' }}"
+                                    />
                                 </td>
                                 <td class="px-4 py-3 text-left">
                                     {{ $nearByLocation->name ?? '-' }}

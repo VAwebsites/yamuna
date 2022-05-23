@@ -19,6 +19,7 @@
                 <x-form
                     method="POST"
                     action="{{ route('near-by-locations.store') }}"
+                    has-files
                     class="mt-4"
                 >
                     @include('app.near_by_locations.form-inputs')

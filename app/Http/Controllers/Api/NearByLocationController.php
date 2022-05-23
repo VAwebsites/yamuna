@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Api;
 use Illuminate\Http\Request;
 use App\Models\NearByLocation;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Storage;
 use App\Http\Resources\NearByLocationResource;
 use App\Http\Resources\NearByLocationCollection;
 use App\Http\Requests\NearByLocationStoreRequest;
@@ -38,6 +39,9 @@ class NearByLocationController extends Controller
         $this->authorize('create', NearByLocation::class);
 
         $validated = $request->validated();
+        if ($request->hasFile('img')) {
+            $validated['img'] = $request->file('img')->store('public');
+        }
 
         $nearByLocation = NearByLocation::create($validated);
 
@@ -69,6 +73,14 @@ class NearByLocationController extends Controller
 
         $validated = $request->validated();
 
+        if ($request->hasFile('img')) {
+            if ($nearByLocation->img) {
+                Storage::delete($nearByLocation->img);
+            }
+
+            $validated['img'] = $request->file('img')->store('public');
+        }
+
         $nearByLocation->update($validated);
 
         return new NearByLocationResource($nearByLocation);
@@ -82,6 +94,10 @@ class NearByLocationController extends Controller
     public function destroy(Request $request, NearByLocation $nearByLocation)
     {
         $this->authorize('delete', $nearByLocation);
+
+        if ($nearByLocation->img) {
+            Storage::delete($nearByLocation->img);
+        }
 
         $nearByLocation->delete();
 

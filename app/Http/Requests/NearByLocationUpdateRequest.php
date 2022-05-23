@@ -24,7 +24,7 @@ class NearByLocationUpdateRequest extends FormRequest
     public function rules()
     {
         return [
-            'img' => ['required', 'max:255', 'string'],
+            'img' => ['image'],
             'name' => ['required', 'max:255', 'string'],
             'order' => ['nullable', 'numeric'],
         ];
