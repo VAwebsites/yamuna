@@ -182,6 +182,20 @@ return [
         ],
     ],
 
+    'near_by_locations' => [
+        'name' => 'Near By Locations',
+        'index_title' => 'NearByLocations List',
+        'new_title' => 'New Near by location',
+        'create_title' => 'Create NearByLocation',
+        'edit_title' => 'Edit NearByLocation',
+        'show_title' => 'Show NearByLocation',
+        'inputs' => [
+            'img' => 'Img',
+            'name' => 'Name',
+            'order' => 'Order',
+        ],
+    ],
+
     'roles' => [
         'name' => 'Roles',
         'index_title' => 'Roles List',

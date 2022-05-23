@@ -58,7 +58,7 @@
                         
                         <x-jet-responsive-nav-link href="{{ route('near-by-locations.index') }}">
                             Near By Locations
-                            </x-jet-responsive-nav-link>
+                            </x-jet-responsive-nav-link>    
                 </x-nav-dropdown>
 
                     @if (Auth::user()->can('view-any', Spatie\Permission\Models\Role::class) || 
