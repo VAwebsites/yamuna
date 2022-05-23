@@ -19,12 +19,12 @@ class NearByLocationController extends Controller
      */
     public function index(Request $request)
     {
-        $this->authorize('view-any', NearByLocation::class);
+        // $this->authorize('view-any', NearByLocation::class);
 
         $search = $request->get('search', '');
 
         $nearByLocations = NearByLocation::search($search)
-            ->latest()
+        ->orderBy('order', 'ASC')
             ->paginate();
 
         return new NearByLocationCollection($nearByLocations);
@@ -36,7 +36,7 @@ class NearByLocationController extends Controller
      */
     public function store(NearByLocationStoreRequest $request)
     {
-        $this->authorize('create', NearByLocation::class);
+        // $this->authorize('create', NearByLocation::class);
 
         $validated = $request->validated();
         if ($request->hasFile('img')) {
@@ -55,7 +55,7 @@ class NearByLocationController extends Controller
      */
     public function show(Request $request, NearByLocation $nearByLocation)
     {
-        $this->authorize('view', $nearByLocation);
+        // $this->authorize('view', $nearByLocation);
 
         return new NearByLocationResource($nearByLocation);
     }
@@ -69,7 +69,7 @@ class NearByLocationController extends Controller
         NearByLocationUpdateRequest $request,
         NearByLocation $nearByLocation
     ) {
-        $this->authorize('update', $nearByLocation);
+        // $this->authorize('update', $nearByLocation);
 
         $validated = $request->validated();
 
@@ -93,7 +93,7 @@ class NearByLocationController extends Controller
      */
     public function destroy(Request $request, NearByLocation $nearByLocation)
     {
-        $this->authorize('delete', $nearByLocation);
+        // $this->authorize('delete', $nearByLocation);
 
         if ($nearByLocation->img) {
             Storage::delete($nearByLocation->img);
