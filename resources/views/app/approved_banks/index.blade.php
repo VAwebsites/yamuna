@@ -58,12 +58,6 @@
                                 <th class="px-4 py-3 text-left">
                                     @lang('crud.approved_banks.inputs.logo')
                                 </th>
-<<<<<<< HEAD
-=======
-                                <th class="px-4 py-3 text-right">
-                                    @lang('crud.approved_banks.inputs.order')
-                                </th>
->>>>>>> master
                                 <th></th>
                             </tr>
                         </thead>
@@ -83,12 +77,6 @@
                                         src="{{ $approvedBank->logo ? \Storage::url($approvedBank->logo) : '' }}"
                                     />
                                 </td>
-<<<<<<< HEAD
-=======
-                                <td class="px-4 py-3 text-right">
-                                    {{ $approvedBank->order ?? '-' }}
-                                </td>
->>>>>>> master
                                 <td
                                     class="px-4 py-3 text-center"
                                     style="width: 134px;"
