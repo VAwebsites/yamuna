@@ -22,6 +22,8 @@ class HomepageSettingResource extends JsonResource
       "project_location" => $this->project_location,
       "rera_number" => $this->rera_number,
       "youtube_link" => $this->youtube_link,
+      "youtube_link_2" => $this->youtube_link_2,
+      "youtube_link_3" => $this->youtube_link_3,
       "brochure" =>  $this->brochure ? asset(\Storage::url($this->brochure)) : '',
       "project_overview" => $this->project_overview,
       "project_type" => $this->project_type,
