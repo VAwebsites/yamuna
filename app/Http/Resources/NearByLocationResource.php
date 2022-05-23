@@ -14,6 +14,11 @@ class NearByLocationResource extends JsonResource
      */
     public function toArray($request)
     {
-        return parent::toArray($request);
+        return [
+            'id' => $this->id,
+            'name' => $this->name,
+            'order' => $this->order,
+            'img' => $this->img ? asset(\Storage::url($this->img)) : '',
+        ];
     }
 }
