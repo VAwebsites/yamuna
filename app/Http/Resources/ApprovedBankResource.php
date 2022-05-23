@@ -17,6 +17,7 @@ class ApprovedBankResource extends JsonResource
         return [
             'id' => $this->id,
             'name' => $this->name,
+            'order' => $this->order,
             'logo' => $this->logo ? asset(\Storage::url($this->logo)) : '',
         ];
     }
