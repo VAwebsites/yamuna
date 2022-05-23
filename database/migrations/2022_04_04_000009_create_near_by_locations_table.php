@@ -12,12 +12,11 @@ return new class extends Migration {
      */
     public function up()
     {
-        Schema::create('approved_banks', function (Blueprint $table) {
+        Schema::create('near_by_locations', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('name');
-            $table->longText('logo');
-            $table->unsignedBigInteger('homepage_setting_id');
-            $table->integer('order');
+            $table->longText('img');
+            $table->mediumText('name');
+            $table->integer('order')->nullable();
 
             $table->timestamps();
         });
@@ -30,6 +29,6 @@ return new class extends Migration {
      */
     public function down()
     {
-        Schema::dropIfExists('approved_banks');
+        Schema::dropIfExists('near_by_locations');
     }
 };

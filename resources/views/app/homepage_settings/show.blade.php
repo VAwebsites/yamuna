@@ -134,6 +134,22 @@
                             }}</span
                         >
                     </div>
+                    <div class="mb-4">
+                        <h5 class="font-medium text-gray-700">
+                            @lang('crud.homepage_settings.inputs.youtube_link_2')
+                        </h5>
+                        <span
+                            >{{ $homepageSetting->youtube_link_2 ?? '-' }}</span
+                        >
+                    </div>
+                    <div class="mb-4">
+                        <h5 class="font-medium text-gray-700">
+                            @lang('crud.homepage_settings.inputs.youtube_link_3')
+                        </h5>
+                        <span
+                            >{{ $homepageSetting->youtube_link_3 ?? '-' }}</span
+                        >
+                    </div>
                 </div>
 
                 <div class="mt-10">

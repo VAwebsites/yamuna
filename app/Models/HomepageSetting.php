@@ -26,6 +26,8 @@ class HomepageSetting extends Model
         'logo',
         'email',
         'footer_description',
+        'youtube_link_2',
+        'youtube_link_3',
     ];
 
     protected $searchableFields = ['*'];

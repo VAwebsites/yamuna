@@ -11,7 +11,7 @@ class ApprovedBank extends Model
     use HasFactory;
     use Searchable;
 
-    protected $fillable = ['name', 'logo', 'homepage_setting_id'];
+    protected $fillable = ['name', 'logo', 'homepage_setting_id', 'order'];
 
     protected $searchableFields = ['*'];
 

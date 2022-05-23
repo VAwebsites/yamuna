@@ -3,17 +3,17 @@
 namespace Database\Factories;
 
 use Illuminate\Support\Str;
-use App\Models\ApprovedBank;
+use App\Models\NearByLocation;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-class ApprovedBankFactory extends Factory
+class NearByLocationFactory extends Factory
 {
     /**
      * The name of the factory's corresponding model.
      *
      * @var string
      */
-    protected $model = ApprovedBank::class;
+    protected $model = NearByLocation::class;
 
     /**
      * Define the model's default state.
@@ -23,10 +23,9 @@ class ApprovedBankFactory extends Factory
     public function definition()
     {
         return [
-            'name' => $this->faker->name,
-            'logo' => $this->faker->text,
+            'img' => $this->faker->text,
+            'name' => $this->faker->text,
             'order' => $this->faker->randomNumber(0),
-            'homepage_setting_id' => \App\Models\HomepageSetting::factory(),
         ];
     }
 }

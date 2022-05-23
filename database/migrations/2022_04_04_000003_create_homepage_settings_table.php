@@ -28,6 +28,8 @@ return new class extends Migration {
             $table->longText('logo')->nullable();
             $table->string('email')->nullable();
             $table->longText('footer_description')->nullable();
+            $table->text('youtube_link_2')->nullable();
+            $table->text('youtube_link_3')->nullable();
 
             $table->timestamps();
         });
