@@ -154,11 +154,7 @@
                             </tr>
                             @empty
                             <tr>
-<<<<<<< HEAD
-                                <td colspan="4">
-=======
                                 <td colspan="5">
->>>>>>> master
                                     @lang('crud.common.no_items_found')
                                 </td>
                             </tr>
@@ -166,11 +162,7 @@
                         </tbody>
                         <tfoot>
                             <tr>
-<<<<<<< HEAD
-                                <td colspan="4">
-=======
                                 <td colspan="5">
->>>>>>> master
                                     <div class="mt-10 px-4">
                                         {!! $approvedBanks->render() !!}
                                     </div>

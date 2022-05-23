@@ -23,7 +23,7 @@ class ApprovedBankController extends Controller
 
         $approvedBanks = ApprovedBank::search($search)
             ->latest()
-            ->paginate(5)
+            ->paginate(50)
             ->withQueryString();
 
         return view(
