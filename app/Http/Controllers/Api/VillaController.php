@@ -25,7 +25,7 @@ class VillaController extends Controller
 
         $villas = Villa::search($search)
             ->latest()
-            ->paginate();
+            ->paginate(50);
 
         return new VillaCollection($villas);
     }

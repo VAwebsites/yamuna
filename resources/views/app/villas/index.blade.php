@@ -1,7 +1,12 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+            @if (array_key_exists('PRODUCT_TYPE', $_SERVER)) 
+            {{$_SERVER['PRODUCT_TYPE']}} List
+            @else
             @lang('crud.villas.index_title')
+            @endif
+        
         </h2>
     </x-slot>
 
