@@ -21,7 +21,7 @@ class BrochureRequestController extends Controller
 
         $brochureRequests = BrochureRequest::search($search)
             ->latest()
-            ->paginate(5)
+            ->paginate(100)
             ->withQueryString();
 
         return view(
