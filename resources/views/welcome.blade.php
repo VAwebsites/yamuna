@@ -4,7 +4,13 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+      <title>
+        @if (array_key_exists('TITLE', $_SERVER)) 
+        {{$_SERVER['TITLE']}}
+        @else
+        YAMUNA BACKEND
+        @endif
+    </title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
