@@ -5,8 +5,14 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
         
-        <title>yamuna-backend [Duplicated]</title>
-        
+
+        <title>
+        @if (array_key_exists('TITLE', $_SERVER)) 
+        {{$_SERVER['TITLE']}}
+        @else
+        YAMUNA BACKEND
+        @endif
+    </title>
         <!-- Fonts -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
         
