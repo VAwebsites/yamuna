@@ -22,7 +22,7 @@ class VillaController extends Controller
 
         $villas = Villa::search($search)
             ->latest()
-            ->paginate(5)
+            ->paginate(50)
             ->withQueryString();
 
         return view('app.villas.index', compact('villas', 'search'));
