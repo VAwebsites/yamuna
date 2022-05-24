@@ -32,7 +32,12 @@
                         @endcan
                         @can('view-any', App\Models\Villa::class)
                         <x-dropdown-link href="{{ route('villas.index') }}">
-                        Villas
+                            @if (array_key_exists('PRODUCT_TYPE', $_SERVER)) 
+                            {{$_SERVER['PRODUCT_TYPE']}}s
+                            @else
+                            Villas
+                            @endif
+        
                         </x-dropdown-link>
                         @endcan
                         @can('view-any', App\Models\Image::class)
