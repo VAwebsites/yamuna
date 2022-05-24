@@ -1,7 +1,13 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+           
+
+            @if (array_key_exists('PRODUCT_TYPE', $_SERVER)) 
+            Create {{$_SERVER['PRODUCT_TYPE']}}
+            @else
             @lang('crud.villas.create_title')
+            @endif
         </h2>
     </x-slot>
 
