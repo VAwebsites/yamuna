@@ -22,8 +22,7 @@ class ApprovedBankController extends Controller
         $search = $request->get('search', '');
 
         $approvedBanks = ApprovedBank::search($search)
-            ->latest()
-            ->paginate(50)
+            ->orderBy('order','ASC')
             ->withQueryString();
 
         return view(
