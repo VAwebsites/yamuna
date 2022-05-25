@@ -58,6 +58,9 @@
                                 <th class="px-4 py-3 text-left">
                                     @lang('crud.approved_banks.inputs.logo')
                                 </th>
+                                <th class="px-4 py-3 text-left">
+                                   Order
+                                </th>
                                 <th></th>
                             </tr>
                         </thead>
@@ -77,6 +80,7 @@
                                         src="{{ $approvedBank->logo ? \Storage::url($approvedBank->logo) : '' }}"
                                     />
                                 </td>
+                                <td>{{$approvedBank->order}}</td>
                                 <td
                                     class="px-4 py-3 text-center"
                                     style="width: 134px;"
@@ -146,6 +150,7 @@
                                     @lang('crud.common.no_items_found')
                                 </td>
                             </tr>
+                   
                             @endforelse
                         </tbody>
                         <tfoot>
