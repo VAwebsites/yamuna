@@ -22,7 +22,7 @@ class ApprovedBankController extends Controller
         $search = $request->get('search', '');
 
         $approvedBanks = ApprovedBank::search($search)
-            ->orderBy('order','ASC')->get();
+            ->orderBy('order','ASC')->paginate(50);
             // ->withQueryString();
 
         return view(
