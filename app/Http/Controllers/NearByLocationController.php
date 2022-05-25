@@ -22,7 +22,7 @@ class NearByLocationController extends Controller
 
         $nearByLocations = NearByLocation::search($search)
             ->latest()
-            ->paginate(5)
+            ->paginate(50)
             ->withQueryString();
 
         return view(
