@@ -29,7 +29,7 @@ class VillaStoreRequest extends FormRequest
             'bhk' => ['required', 'numeric'],
             'sq_feet' => ['required', 'numeric'],
             'land_size' => ['nullable', 'numeric'],
-            'price' => ['nullable', 'numeric'],
+            'price' => ['nullable'],
         ];
     }
 }
