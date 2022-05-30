@@ -17,7 +17,7 @@ class HomepageSettingResource extends JsonResource
     public function toArray($request)
     {
         return [
-            'id' => $this->id,
+      'id' => $this->id,
       "project_title" => $this->project_title,
       "project_location" => $this->project_location,
       "rera_number" => $this->rera_number,
