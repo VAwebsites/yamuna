@@ -84,12 +84,12 @@
     </x-inputs.group>
 
     <x-inputs.group class="w-full lg:w-4/12">
-        <x-inputs.number
+        <x-inputs.text
             name="price"
             label="Price"
             value="{{ old('price', ($editing ? $villa->price : '')) }}"
             step="0.01"
             placeholder="Price"
-        ></x-inputs.number>
+        ></x-inputs.text>
     </x-inputs.group>
 </div>
