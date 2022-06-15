@@ -18,8 +18,8 @@ class HomepageSettingResource extends JsonResource
     {
         return [
       'id' => $this->id,
-      "project_title" => $this->project_title,
-      "project_location" => $this->project_location,
+      "project_title" => html_entity_decode($this->project_title),
+      "project_location" => html_entity_decode($this->project_location),
       "rera_number" => $this->rera_number,
       "youtube_link" => $this->youtube_link,
       "youtube_link_2" => $this->youtube_link_2,
